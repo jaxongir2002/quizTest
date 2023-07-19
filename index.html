@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .center {
+            right: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+            position: absolute;
+        }
+        .correct{
+            background-color: #9aeabc;
+        }
+        .incorrect{
+            background-color: #ff9393;
+        }
+        .btn{
+           
+            color: rgb(26, 25, 25);
+            font-weight: 600;
+            font-family: sans-serif;
+            display: block;
+            padding: 20px;
+            width: 100%;
+            margin: 20px;
+            border:1px solid black;
+            border-radius: 10px;
+            transition: .5s;
+        }
+        .btn:hover:not([disabled]){
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+        .btn:disabled{
+            cursor: no-drop;
+        }
+    </style>
+</head>
+
+<body class=" bg-slate-700 center">
+    <div class="card bg-slate-200 w-96 rounded-lg p-2">
+        <div class=" w-4/5">
+            <h3 class=" m-2 underline p-2 text-slate-900">
+                Simple Quiz
+            </h3>
+            <h3 class="m-2 question">
+                1. Which in lagest animal in the world?
+            </h3>
+            <div id="answer">
+                <div class="m-2 rounded-md p-2 border border-slate-700">
+                    Shark
+                </div>
+                <div class=" m-2 rounded-md border p-2 border-slate-700">
+                    Shark
+                </div>
+                <div class="m-2 rounded-md p-2 border border-slate-700">
+                    Shark
+                </div>
+                <div class="m-2 rounded-md p-2 border border-slate-700">
+                    Shark
+                </div>
+            </div>
+           
+
+        </div>
+<button class="bg-slate-600 rounded-xl text-white w-24 m-auto block p-2" id="nextBtn"> 
+    Next
+</button>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
